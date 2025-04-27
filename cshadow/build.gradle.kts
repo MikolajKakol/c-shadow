@@ -1,6 +1,7 @@
 plugins {
     kotlin("multiplatform")
     alias(libs.plugins.android.library)
+    alias(libs.plugins.compose.compiler)
     alias(libs.plugins.jetbrains.compose)
     id("module.publication")
 }
@@ -8,13 +9,8 @@ plugins {
 kotlin {
     jvm()
 
-    android {
+    androidTarget {
         publishLibraryVariants("release")
-        compilations.all {
-            kotlinOptions {
-                jvmTarget = "1.8"
-            }
-        }
     }
 
     iosX64()
@@ -71,7 +67,7 @@ android {
     buildFeatures {
         buildConfig = false
     }
-    packagingOptions {
+    packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
