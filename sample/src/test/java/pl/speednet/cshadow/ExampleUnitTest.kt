@@ -1,4 +1,4 @@
-package pl.speednet.cshadow
+package dev.mikkak.cshadow
 
 import org.junit.Test
 

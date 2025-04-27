@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "pl.speednet.cshadow.sample"
+    namespace = "dev.mikkak.cshadow.sample"
     compileSdk = libs.versions.compileSdk.get().toInt()
 
     defaultConfig {
-        applicationId = "pl.speednet.cshadow.sample"
+        applicationId = "dev.mikkak.cshadow.sample"
         minSdk = libs.versions.minSdk.get().toInt()
         targetSdk = libs.versions.targetSdk.get().toInt()
         versionCode = 1

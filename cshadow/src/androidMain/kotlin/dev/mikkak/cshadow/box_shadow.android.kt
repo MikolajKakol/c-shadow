@@ -1,4 +1,4 @@
-package pl.speednet.cshadow
+package dev.mikkak.cshadow
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box

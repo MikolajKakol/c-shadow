@@ -1,4 +1,4 @@
-package pl.speednet.cshadow.sample
+package dev.mikkak.cshadow.sample
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

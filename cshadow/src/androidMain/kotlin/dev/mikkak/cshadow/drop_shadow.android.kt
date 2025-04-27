@@ -1,4 +1,4 @@
-package pl.speednet.cshadow
+package dev.mikkak.cshadow
 
 import android.graphics.Bitmap
 import androidx.compose.foundation.Image

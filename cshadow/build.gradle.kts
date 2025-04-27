@@ -58,7 +58,7 @@ kotlin {
 }
 
 android {
-    namespace = "pl.speednet.cshadow"
+    namespace = "dev.mikkak.cshadow"
     compileSdk = libs.versions.compileSdk.get().toInt()
 
     defaultConfig {

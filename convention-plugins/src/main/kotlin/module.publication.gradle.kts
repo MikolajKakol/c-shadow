@@ -7,7 +7,7 @@ plugins {
     signing
 }
 
-group = "pl.speednet.c-shadow"
+group = "dev.mikkak.c-shadow"
 version = "0.1.3"
 
 publishing {
@@ -24,7 +24,7 @@ publishing {
         pom {
             name.set("c-shadow")
             description.set("CSS alike shadow support for for Jetpack Compose & Multiplatform.")
-            url.set("https://github.com/speednet-pl/c-shadow")
+            url.set("https://github.com/MikolajKakol/c-shadow")
 
             licenses {
                 license {
@@ -36,11 +36,11 @@ publishing {
                 developer {
                     id.set("MikolajKakol")
                     name.set("Mikolaj Kakol")
-                    email.set("mikolaj.kakol@gmail.com")
+                    email.set("contact@mikolaj-kakol.me")
                 }
             }
             scm {
-                url.set("https://github.com/speednet-pl/c-shadow")
+                url.set("https://github.com/MikolajKakol/c-shadow")
             }
         }
     }

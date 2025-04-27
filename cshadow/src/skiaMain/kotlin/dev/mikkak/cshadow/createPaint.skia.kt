@@ -1,4 +1,4 @@
-package pl.speednet.cshadow
+package dev.mikkak.cshadow
 
 import androidx.compose.ui.graphics.Paint
 import org.jetbrains.skia.FilterBlurMode

@@ -1,4 +1,4 @@
-package pl.speednet.cshadow
+package dev.mikkak.cshadow
 
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.drawWithCache

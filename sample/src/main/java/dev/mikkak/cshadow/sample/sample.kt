@@ -1,4 +1,4 @@
-package pl.speednet.cshadow.sample
+package dev.mikkak.cshadow.sample
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -20,7 +20,7 @@ import androidx.compose.ui.res.imageResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import pl.speednet.cshadow.shadow
+import dev.mikkak.cshadow.shadow
 import kotlin.math.roundToInt
 
 @Preview
