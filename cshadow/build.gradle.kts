@@ -1,9 +1,11 @@
+import com.vanniktech.maven.publish.SonatypeHost
+
 plugins {
     kotlin("multiplatform")
     alias(libs.plugins.android.library)
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.jetbrains.compose)
-    id("module.publication")
+    alias(libs.plugins.publish)
 }
 
 kotlin {
@@ -70,6 +72,39 @@ android {
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
+        }
+    }
+}
+
+mavenPublishing {
+    publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
+    signAllPublications()
+
+    coordinates("dev.mikkak.c-shadow", "c-shadow", "0.1.3")
+
+    pom {
+        name.set("c-shadow")
+        description.set("CSS alike shadow support for for Jetpack Compose & Multiplatform.")
+        url.set("https://github.com/MikolajKakol/c-shadow")
+
+        licenses {
+            license {
+                name.set("MIT")
+                url.set("https://opensource.org/licenses/MIT")
+                distribution.set("https://opensource.org/licenses/MIT")
+            }
+        }
+        developers {
+            developer {
+                id.set("MikolajKakol")
+                name.set("Mikolaj Kakol")
+                email.set("contact@mikolaj-kakol.me")
+            }
+        }
+        scm {
+            url.set("https://github.com/MikolajKakol/c-shadow")
+            connection.set("scm:git:git://github.com/MikolajKakol/c-shadow.git")
+            developerConnection.set("scm:git:ssh://git@github.com/MikolajKakol/c-shadow.git")
         }
     }
 }
