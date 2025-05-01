@@ -15,4 +15,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "c-shadow"
 include(":cshadow")
-include(":sample")
+include(":sample:android")
