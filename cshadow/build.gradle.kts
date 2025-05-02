@@ -25,7 +25,7 @@ kotlin {
             dependencies {
                 implementation(compose.runtime)
                 implementation(compose.foundation)
-                implementation(libs.compose.ui.tooling)
+                implementation(compose.components.uiToolingPreview)
             }
         }
         val commonTest by getting
