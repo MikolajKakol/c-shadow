@@ -25,6 +25,7 @@ kotlin {
             dependencies {
                 implementation(compose.runtime)
                 implementation(compose.foundation)
+                implementation(libs.compose.ui.tooling)
             }
         }
         val commonTest by getting
@@ -40,7 +41,6 @@ kotlin {
 
         val androidMain by getting {
             dependencies {
-                implementation(libs.compose.ui.tooling)
                 implementation(compose.material3)
                 implementation(libs.pathway)
             }
@@ -80,7 +80,7 @@ mavenPublishing {
     publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
     signAllPublications()
 
-    coordinates("dev.mikkak.c-shadow", "c-shadow", "0.1.3")
+    coordinates("dev.mikkak.c-shadow", "c-shadow", "0.1.4")
 
     pom {
         name.set("c-shadow")
