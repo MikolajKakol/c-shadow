@@ -1,7 +1,10 @@
+@file:OptIn(ExperimentalWasmDsl::class)
+
 import com.vanniktech.maven.publish.SonatypeHost
+import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 
 plugins {
-    kotlin("multiplatform")
+    alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.android.library)
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.jetbrains.compose)
@@ -9,6 +12,8 @@ plugins {
 }
 
 kotlin {
+    applyDefaultHierarchyTemplate()
+
     jvm()
 
     androidTarget {
@@ -19,6 +24,13 @@ kotlin {
     iosArm64()
     iosSimulatorArm64()
 
+    wasmJs {
+        browser()
+    }
+    js(IR) {
+        browser()
+    }
+
     @Suppress("UNUSED_VARIABLE")
     sourceSets {
         val commonMain by getting {
@@ -28,33 +40,31 @@ kotlin {
                 implementation(compose.components.uiToolingPreview)
             }
         }
-        val commonTest by getting
 
         val skiaMain by creating {
             dependsOn(commonMain)
         }
 
-        val jvmMain by getting {
+        jvmMain {
             dependsOn(skiaMain)
         }
-        val jvmTest by getting
 
-        val androidMain by getting {
+        androidMain {
             dependencies {
                 implementation(compose.material3)
                 implementation(libs.pathway)
             }
         }
 
-        val iosX64Main by getting
-        val iosArm64Main by getting
-        val iosSimulatorArm64Main by getting
-        val iosMain by creating {
-            dependsOn(commonMain)
+        iosMain {
             dependsOn(skiaMain)
-            iosX64Main.dependsOn(this)
-            iosArm64Main.dependsOn(this)
-            iosSimulatorArm64Main.dependsOn(this)
+        }
+
+        wasmJsMain {
+            dependsOn(skiaMain)
+        }
+        jsMain {
+            dependsOn(skiaMain)
         }
     }
 }

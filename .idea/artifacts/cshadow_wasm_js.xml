@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="cshadow-wasm-js">
+    <output-path>$PROJECT_DIR$/cshadow/build/libs</output-path>
+    <root id="archive" name="cshadow-wasm-js.jar">
+      <element id="module-output" name="c-shadow-root.cshadow.wasmJsMain" />
+    </root>
+  </artifact>
+</component>

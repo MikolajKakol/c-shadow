@@ -13,6 +13,15 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "c-shadow"
-include(":cshadow")
-include(":sample:android")
+
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+enableFeaturePreview("STABLE_CONFIGURATION_CACHE")
+
+rootProject.name = "c-shadow-root"
+include(
+    ":cshadow",
+    ":sample:android",
+    ":sample:desktop",
+    ":sample:shared",
+    ":sample:web",
+)
