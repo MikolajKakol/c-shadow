@@ -32,7 +32,7 @@ android {
 }
 
 dependencies {
-    implementation(project(":cshadow"))
+    implementation(projects.sample.shared)
     compose()
 
     implementation(libs.androidx.core.ktx)
