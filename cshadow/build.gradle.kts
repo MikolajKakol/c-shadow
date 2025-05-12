@@ -90,7 +90,7 @@ mavenPublishing {
     publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
     signAllPublications()
 
-    coordinates("dev.mikkak.c-shadow", "c-shadow", "0.1.4")
+    coordinates("dev.mikkak.c-shadow", "c-shadow", "0.2.0")
 
     pom {
         name.set("c-shadow")
